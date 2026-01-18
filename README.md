@@ -1,8 +1,6 @@
-# Green-Pill-Nano-Skeleton
+# Green-Pill-Nano-Low-Power
 
-This is the skeleton application for PlatformIO you can use when you start a project with Green Pill Nano.
-
-It contains all board configuration files and also a platformio.ini with most frequently used options for building, flashing and debugging.
+Demo application for deep sleep mode on Green Pill Nano (STM32L072). It showcases sleep mode with wake up either from RTC at configurable times, or an external input (button connected between pin 3 and ground).
 
 For extra convenience, the solution also includes the following libraries:</br>
 STM32LowPower https://github.com/stm32duino/STM32LowPower</br>
