@@ -1,0 +1,48 @@
+{
+  "build": {
+    "cpu": "cortex-m0plus",
+    "extra_flags": "-DSTM32L0 -DSTM32L072xx",
+    "f_cpu": "32000000L",
+    "framework_extra_flags": {
+      "arduino": "-D__CORTEX_SC=0 -DARDUINO_GENERIC_L072CBTX"
+    },
+    "mcu": "stm32l072cb",
+    "product_line": "STM32L072xx",
+    "variant": "GREEN_PILL_NANO"
+  },
+  "debug": {
+    "default_tools": [
+      "stlink"
+    ],
+    "jlink_device": "STM32L072CB",
+    "onboard_tools": [
+      "stlink"
+    ],
+    "openocd_board": "st_nucleo_l073rz",
+    "openocd_target": "stm32l0",
+    "svd_path": "STM32L07x.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "mbed",
+    "stm32cube",
+    "libopencm3",
+    "zephyr"
+  ],
+  "name": "GREEN_PILL",
+  "upload": {
+    "maximum_ram_size": 20480,
+    "maximum_size": 131072,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "cmsis-dap",
+      "stlink",
+      "blackmagic",
+      "mbed"
+    ]
+  },
+  "url": "https://developer.mbed.org/platforms/ST-Nucleo-L073RZ/",
+  "vendor": "ST"
+}
