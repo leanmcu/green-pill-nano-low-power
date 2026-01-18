@@ -51,13 +51,13 @@ void setup()
   Disable_GPIO();
   Disable_Peripherals();
   Disable_RTC();
-  // uncomment line below for periodic wake up every _atime seconds
+  // uncomment line below for periodic wake up every _sleepDuration seconds
   Set_Rtc();
   // uncomment the 2 lines below for button wake up from sleep mode
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), Button_ISR, FALLING);
   LowPower.begin();
-  // uncomment the 2 lines below for periodic wake up every _atime seconds
+  // uncomment the 2 lines below for periodic wake up every _sleepDuration seconds
   LowPower.enableWakeupFrom(&_rtc, AlarmMatch, &_sleepDuration);
   _rtc.setAlarmEpoch(_rtc.getEpoch() + _sleepDuration);
 }
