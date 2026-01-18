@@ -40,7 +40,7 @@ void Set_Rtc(void);
 void AlarmMatch(void *data);
 void Button_ISR();
 
-uint32_t _sleepDuration = 10; // Alarm time in seconds
+uint32_t _sleepDuration = 10; // sleep time in seconds
 volatile bool _buttonPressed = false;
 volatile uint32_t _nextAlarmTime = 0;
 STM32RTC &_rtc = STM32RTC::getInstance();
